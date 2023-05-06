@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "Doppio-One";
+  src: local("Doppio-One"),
+    url("../fonts/DoppioOne-Regular.ttf") format("truetype");
+}
+
+
+*, body {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	margin: 0;
+	padding: 0;
+}
+.container {
+	max-width: 1200px; 
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+body.lock {
+    overflow: hidden;
+}
+header{
+	padding: 30px 0;
+	background-color: #141414;
+}
+.header_cols {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header_cols .header_col h1{
+	font-weight: lighter;
+	color: #fff;
+	font-family: "Doppio-One";
+}
+.header_cols .header_col ul {
+	line-height: 38px;
+}
+.header_cols .header_col ul li{
+	display: inline-block;
+	margin: 0px 12px;
+	font-size: 18px;
+	font-family: "Doppio-One";
+}
+.header_cols .header_col ul li a{
+	color: #fff;
+	font-weight: lighter;
+	text-decoration: none;
+}
+.header__burger{
+	display: none;
+	position: relative;
+	width: 25px;
+	cursor: pointer;
+	height:20px;
+	z-index:2000;
+	margin-top: 10px;
+}
+.header__burger .active{
+	background-color: transparent!important;
+}
+.header__burger span{
+	position: absolute;
+	background-color: #fff;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	top: 9px;
+	transition: all 0.3s ease 0s;
+}
+.header__burger:before,
+.header__burger:after{
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	left: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.header__burger:before{
+	top: 1px;
+}
+
+.header__burger:after{
+	bottom: 1px;
+}
+.header__burger.active span{
+	transform: scale(0);
+}
+.header__burger.active:before{
+	transform: rotate(45deg);
+	top: 9px;
+}
+.header__burger.active:after{
+	transform: rotate(-45deg);
+	bottom: 9px;
+}
+
+/*====================== Page Banner ============================*/
+
+.page_banner {
+	background-image: url('../img/banner.png');
+	background-position: center center;
+	background-blend-mode: multiply;
+	background-color: #3b3636;
+	background-size: cover;
+	padding: 140px 0;
+}
+.page_banner h1{
+	font-family: "Doppio-One";
+	color: #F93B4C;
+	letter-spacing: 1px;
+	font-weight: lighter;
+	font-size: 60px;
+	margin: 0px 500px 0px 0px;
+	margin-bottom: 40px;
+}
+.page_banner button{
+	background-color: #F93B4C;
+	color: #fff;
+	border:none;
+	padding: 20px 40px;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+/*====================== Marketing ============================*/
+
+.marketing, .research {
+	background-color: #141414;
+	padding: 30px 0;
+}
+b{
+	color: #F93B4C;
+}
+.marketing h2, .research h2, .consulting h2, .contacts h2{
+	font-family: "Doppio-One";
+	font-size: 35px;
+	letter-spacing: 1.5px;
+	color: #fff;
+	margin-bottom: 40px;
+}
+.marketing_cols, .research_cols{
+	display: flex;
+	flex-wrap: wrap;
+}
+.marketing_cols .marketing_col, .research_cols .research_col {
+	flex: 0 0 46%;
+    margin: 0px 30px 30px 0px;
+}
+.research_cols .research_col {
+	flex: 0 0 30%;
+    margin: 0px 30px 30px 0px;
+}
+.marketing_cols .marketing_col h3, .research_cols .research_col h3{
+	font-family: "Doppio-One";
+	color:#fff;
+	letter-spacing: 1.5px;
+	margin-bottom: 20px;
+}
+.marketing_cols .marketing_col ul, .research_cols .research_col ul{
+	list-style: none;
+}
+.marketing_cols .marketing_col ul li, .research_cols .research_col ul li{
+	font-family: "Doppio-One";
+	color: #fff;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+/*====================== Consulting ================*/
+
+.consulting {
+	background-color: #141414;
+	padding: 30px 0;
+}
+.accordion-menu {
+	width: 100%;
+	max-width: 800px;
+	list-style: none;
+	position: relative;
+}
+.accordion-menu > li {
+	border-bottom: 0px solid #F93B4C;
+	border-top: 2px solid #F93B4C;
+}
+.accordion-menu > li:last-child{
+	border-bottom: 2px solid #F93B4C;
+}
+.dropdownlink {
+	cursor: pointer;
+	display: block;
+	padding: 20px 0px;
+	font-size: 25px;
+	color: #fff;
+	font-family: "Doppio-One";
+	position: relative;
+	transition: all 0.4s ease-out;  
+}
+.dropdownlink i {
+	position: absolute;
+	right: 10px;
+	color: #212121;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	transition: .3s;
+}
+.accordion-menu > li.open .dropdownlink i{
+	transform: rotate(-45deg);
+}
+.accordion-menu > li:hover .dropdownlink i {
+	background-color: #F93B4C;
+	color: #fff;
+}
+.submenuItems {
+	display: none;
+	list-style: outside;
+	margin-left: 20px;
+}
+.submenuItems li{ 
+	color: #fff;
+	padding-bottom: 10px;
+	font-family: "Doppio-One";
+}
+
+/*====================== Contacts ================*/
+.contacts {
+	background-color: #141414;
+	padding: 30px 0;
+}
+.contacts_cols {
+	display: flex;
+	justify-content: space-between;
+}
+.contacts_cols .contacts_col{
+	flex: 0 0 40%;
+}
+.contacts_cols .contacts_col h3{
+	color: #fff;
+	font-family: "Doppio-One";
+	line-height: 50px;
+}
+.contacts_cols .contacts_col h3.email{
+	color: #f93b4c;
+}
+.contacts_cols .contacts_col h4{
+	color: #fff;
+	font-family: "Doppio-One";
+	font-size: 20px;
+}
+.contacts_cols .contacts_col input, textarea{
+	display: block;
+	width: 100%;
+	border:1px solid #212121;
+	padding: 15px;
+	outline: none;
+	color: #2f2e2e;
+	background-color: transparent;
+	margin-bottom: 10px;
+}
+.contacts_cols .contacts_col textarea{
+	resize: none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+   color:  #2f2e2e;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:  #2f2e2e;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:  #2f2e2e;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:  #2f2e2e;
+}
+.contacts_cols .contacts_col input[type="submit"]{
+	background-color: #f93b4c;
+	color: #fff;
+	font-family: "Doppio-One";
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+

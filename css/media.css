@@ -1,0 +1,110 @@
+@media (max-width: 1200px) {
+	.page_banner h1{
+		font-family: "Doppio-One";
+		color: #F93B4C;
+		letter-spacing: 1px;
+		font-weight: lighter;
+		font-size: 50px;
+		margin: 0px 150px 0px 0px;
+		margin-bottom: 40px;
+	}
+}
+@media (max-width: 768px) {
+	.burger_menu{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.page_banner {
+		padding: 50px 0;
+	}
+	.page_banner h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.page_banner button{
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+
+	.header__burger{
+		display: block;
+	}
+	.header_cols .header_col ul {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		padding: 40px 0px 0px 0px;
+		width: 100%;
+		top: -120%;
+		z-index: 999;
+		transition: .3s;
+		background: #141414;
+	}
+	.header_cols .header_col ul.active{
+		top: 0;
+	}
+	.header_cols .header_col ul li{
+		display: block;
+		line-height: 50px;
+		text-align: center;
+	}
+	.contacts_cols {
+		display: block;
+	}
+	h3.email {
+		color: #f93b4c;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 520px){
+	.marketing h2, .research h2, .consulting h2, .contacts h2 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.dropdownlink {
+	    font-size: 20px;
+	}
+	.dropdownlink i {
+		width: 30px;
+		font-size: 17px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.page_banner h1 {
+		font-size: 25px;
+		margin: 0px 0px 0px 0px;
+		margin-bottom: 30px;
+	}
+	.contacts_cols .contacts_col input[type="submit"] {
+	    font-size: 12px;
+	}
+	.contacts_cols .contacts_col h3 {
+	    font-size: 18px;
+	    line-height: 40px;
+	}
+}
+@media (max-width: 420px){
+	.marketing h2, .research h2, .consulting h2, .contacts h2 {
+	    font-size: 18px;
+	    margin-bottom: 20px;
+	}
+	.dropdownlink {
+	    font-size: 16px;
+	}
+	.dropdownlink i {
+		width: 25px;
+		font-size: 17px;
+		height: 25px;
+		line-height: 25px;
+	}
+	.submenuItems {
+		font-size: 14px;
+	}
+}
+@media (max-width: 350px){
+	.dropdownlink {
+	    font-size: 14px;
+	}
+}
